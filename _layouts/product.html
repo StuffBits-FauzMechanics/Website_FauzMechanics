@@ -14,8 +14,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ site.url }}/assets/img/favicon.png" rel="icon">
+  <link href="{{ site.url }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,23 +23,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-  <link href="assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+  <link href="{{ site.url }}/assets/css/variables.css" rel="stylesheet">
+  <!-- <link href="{{ site.url }}/assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="{{ site.url }}/assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="{{ site.url }}/assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="{{ site.url }}/assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="{{ site.url }}/assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="{{ site.url }}/assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.3.1
@@ -63,8 +63,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>{{ page.title }}</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="{{ page.permalink }}">{{ page.category }}</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="{{ site.url }}{{ product.permalink }}">{{ page.category }}</a></li>
           </ol>
         </div>
 
@@ -122,18 +122,18 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Product information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Category</strong>: {{ page.category }}</li>
                 <li><strong>Client</strong>: ASU Company</li>
                 <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><a href="https://www.autosar.org/fileadmin/user_upload/standards/foundation/19-11/AUTOSAR_PRS_NetworkManagementProtocol.pdf"><strong>Boucher URL</strong></a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>{{ page.teaser }}</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{ page.content }}
               </p>
             </div>
           </div>
@@ -153,15 +153,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ site.url }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ site.url }}/assets/vendor/aos/aos.js"></script>
+  <script src="{{ site.url }}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{ site.url }}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="{{ site.url }}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ site.url }}/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ site.url }}/assets/js/main.js"></script>
 
 </body>
 
