@@ -247,6 +247,7 @@ section {
 }
 
 .header .logo h1 {
+  padding-top: 3%;
   font-size: 32px;
   font-weight: 300;
   color: var(--color-secondary);

@@ -1,0 +1,26 @@
+[
+    {
+        "category":"General",
+        "category_page":"posts-general.html"
+    },
+    {
+        "category":"Lifestyle",
+        "category_page":"posts-lifestyle.html"
+    },
+    {
+        "category":"Travel",
+        "category_page":"posts-travel.html"
+    },
+    {
+        "category":"Design",
+        "category_page":"posts-design.html"
+    },
+    {
+        "category":"Creative",
+        "category_page":"posts-creative.html"
+    },            
+    {
+        "category":"Educaion",
+        "category_page":"posts-educaion.html"
+    } 
+]
