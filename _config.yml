@@ -2,7 +2,7 @@
 title: Fauz Mechanics
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
-url: 'http://127.0.0.1:4000'
+url: 'https://www.fauzmechanics.com'
 
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
@@ -10,5 +10,5 @@ url: 'http://127.0.0.1:4000'
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: 'http://127.0.0.1:4000/assets/img/'
+urlimg: 'https://www.fauzmechanics.com/assets/img/'
 
