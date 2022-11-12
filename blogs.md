@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: blogs
 
-title: Home
+title: Blogs
 ---
 
 # {{ page.title }}

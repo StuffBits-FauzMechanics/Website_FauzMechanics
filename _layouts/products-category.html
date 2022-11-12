@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Product - {{ site.title }}</title>
+  <title>Products Cetegory - {{ site.title }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -63,95 +63,88 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>{{ page.title }}</h2>
           <ol>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="{{ site.url }}{{ product.permalink }}">{{ page.category }}</a></li>
+            <li><a href="{{ site.url }}/index.html#home">Home</a></li>
+            <li>{{ page.title }}</li>
           </ol>
         </div>
 
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    <!-- ======= Product Category Section ======= -->
+    <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4">
+        <div class="row g-5">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide">
-                  <img src="{{ site.urlimg }}{{ page.image.main }}" alt="">
-                </div>
+            <div class="row gy-4 posts-list">
 
-                {% if page.image.swiper1 %}
-                  <div class="swiper-slide">
-                    <img src="{{ site.urlimg }}{{ page.image.swiper1 }}" alt="">
-                  </div>
+              {% for product in site.products %}
+                {% if product.category == page.title %}
+                  <div class="col-lg-6">
+                    <article class="d-flex flex-column">           
+                      <div class="post-img">
+                        {% if product.image.main %}
+                        <img src="{{ site.urlimg }}{{ product.image.main }}" alt="" class="img-fluid">
+                        {% else %}
+                        <img src="{{site.urlimg}}blog/blog-1.jpg" alt="" class="img-fluid">
+                        {% endif %}
+                      </div>
+    
+                      <h2 class="title">
+                        <a href="{{ site.url }}{{ product.permalink }}">{{ product.title }}</a>
+                      </h2>
+ 
+                      <div class="content">
+                        <p>
+                          {{ product.teaser }}
+                        </p>
+                      </div>
+                  
+                      <div class="read-more mt-auto align-self-end">
+                        <a href="{{ site.url }}{{ product.permalink }}">More Details</a>
+                      </div>
+                    </article>
+                  </div><!-- End post list item -->                
                 {% endif %}
+              {% endfor %}
+              
+            </div><!-- End blog posts list -->
 
-                {% if page.image.swiper2 %}
-                  <div class="swiper-slide">
-                    <img src="{{ site.urlimg }}{{ page.image.swiper2 }}" alt="">
-                  </div>
-                {% endif %}
+            <div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div><!-- End blog pagination -->
 
-                {% if page.image.swiper3 %}
-                <div class="swiper-slide">
-                  <img src="{{ site.urlimg }}{{ page.image.swiper3 }}" alt="">
-                </div>
-                {% endif %}
-
-                {% if page.image.swiper4 %}
-                  <div class="swiper-slide">
-                    <img src="{{ site.urlimg }}{{ page.image.swiper4 }}" alt="">
-                  </div>
-                {% endif %}
-                
-                {% if page.image.swiper5 %}
-                  <div class="swiper-slide">
-                    <img src="{{ site.urlimg }}{{ page.image.swiper5 }}" alt="">
-                  </div>
-                {% endif %}
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
           </div>
 
           <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Product information</h3>
-              <ul>
-                <li><strong>Category</strong>: {{ page.category }}</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Downloads</strong>:</li>
-                <!-- Jekyll liquid code -->
-                {% if page.productinfo.download1 %}
-                  <li><a href="{{ page.productinfo.download1 }}"><strong>Product Brochure</strong></a></li>
-                {% endif %}
-                {% if page.productinfo.download2 %}
-                  <li><a href="{{ page.productinfo.download2 }}"><strong>Product Brochure - 2</strong></a></li>
-                {% endif %}
-                {% if page.productinfo.download3 %}
-                  <li><a href="{{ page.productinfo.download3 }}"><strong>Product Brochure - 3</strong></a></li>
-                {% endif %}
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>{{ page.teaser }}</h2>
-              <p>
-                {{ page.content }}
-              </p>
-            </div>
+
+            <div class="sidebar">
+
+              <div class="sidebar-item categories">
+                <h3 class="sidebar-title">Products Range</h3>
+                <ul class="mt-3">
+                  <!-- Jekyll data files -->
+                  {% for procat in site.data.products_category %}
+                    <li><a href="{{ site.url }}/{{ procat.filter }}/index.html">{{ procat.category }} <span>(12)</span></a></li>
+                  {% endfor %}
+                </ul>
+              </div><!-- End sidebar categories-->
+
+            </div><!-- End Blog Sidebar -->
+
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section><!-- End Blog Section -->
 
   </main><!-- End #main -->
 
