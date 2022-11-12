@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blog - Fauz Mechanics</title>
+  <title>Blog - {{ site.title }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -86,27 +86,27 @@
                 <article class="d-flex flex-column">           
                   <div class="post-img">
                     {% if post.image %}
-                    <img src="{{site.urlimg}}{{post.image}}" alt="" class="img-fluid">
+                      <img src="{{site.urlimg}}{{post.image}}" alt="" class="img-fluid">
                     {% else %}
-                    <img src="{{site.urlimg}}blog/blog-1.jpg" alt="" class="img-fluid">
+                      <img src="{{site.urlimg}}blog/blog-1.jpg" alt="" class="img-fluid">
+                    {% endif %}
                   </div>
-                  {% endif %}
 
                   <h2 class="title">
-                    <a href="blog-details.html">{{post.title}}</a>
+                    <a href="blog-details.html">{{ post.title }}</a>
                   </h2>
 
                   <div class="meta-top">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{post.author}}</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">{{post.postdate}}</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">{{post.comments}} Comments</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{ post.author }}</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">{{ post.postdate }}</time></a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">{{ post.comments }} Comments</a></li>
                     </ul>
                   </div>
 
                   <div class="content">
                     <p>
-                      {{post.teaser}}
+                      {{ post.teaser }}
                     </p>
                   </div>
               

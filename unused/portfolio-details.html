@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Fauz Mechanics</title>
+  <title>Portfolio Details - {{ site.title }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -53,8 +53,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ site.url }}/assets/img/logo.png" alt="Fauz Mechanics Logo">
-        <h1>Fauz Mechanics<span>.</span></h1>
+        <img src="{{ site.url }}/assets/img/logo.png" alt="{{ site.title }} Logo">
+        <h1>{{ site.title }}<span>.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -74,7 +74,7 @@
           <!-- <li><a class="nav-link scrollto" href="index.html#services">Services</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="index.html#team">Team</a></li> -->
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blogs.html">Blog</a></li>
           <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
@@ -210,7 +210,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Fauz Mechanics</h3>
+              <h3>{{ site.title }}</h3>
               <p>
                 We are service providers as well as <br>
                 manufacturers of Industrial Electronics Products.<br>
@@ -263,7 +263,7 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>Fauz Mechanics</span></strong> since <strong><span>2006</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>{{ site.title }}</span></strong> since <strong><span>2006</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->

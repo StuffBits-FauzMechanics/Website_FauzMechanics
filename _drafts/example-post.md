@@ -1,21 +1,12 @@
 ---
 layout: post
 
-subheadline: CAN
-breadcrumb: true #this is done to disable showing of path
-
 title:  "Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia"
 teaser: "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta."
 
 categories:
-    - Embedded Basics
 
 tags:
-    - embedded
-    - CAN
-    - basics
-
-header:
 
 image: "portfolio/air_nozzles/air-shower-nozzle.jpg"
 
@@ -24,8 +15,6 @@ featured: false
 author: Jon Doe
 postdate: Jan 1, 2022
 comments: 12
-
-youtubeId:
 ---
 
 <p>

@@ -1,22 +1,22 @@
 [
     {
         "category":"Air Nozzles",
-        "category_page":"air-nozzles.html"
+        "filter": "air-nozzles"
     },
     {
         "category":"Flow Meters",
-        "category_page":"flow-meters.html"
+        "filter": "flow-meters"
     },
     {
         "category":"Manometers",
-        "category_page":"manometers.html"
+        "filter": "manometers"
     },
     {
         "category":"Pressure Guages",
-        "category_page":"pressure-guages.html"
+        "filter": "pressure-guages"
     },
     {
         "category":"Rotameters",
-        "category_page":"rotameters.html"
+        "filter": "rotameters"
     }            
 ]
